@@ -1,104 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Admin Login</title>
-
-<link rel="stylesheet" href="../static/css/style.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-</head>
+{% extends "base.html" %}
 
 
-<body>
-
-
-<div class="login-container">
-
-
-<div class="login-box">
-
-
-<div class="login-icon">
-
-<i class="fa-solid fa-user-shield"></i>
-
-</div>
-
-
-
-<h1>
+{% block title %}
 Admin Login
-</h1>
-
-
-<p>
-Manage AI Evaluation Platform
-</p>
+{% endblock %}
 
 
 
-<form>
+{% block content %}
 
 
-<div class="input-box">
-
-<i class="fa-solid fa-envelope"></i>
-
-<input 
-type="email"
-placeholder="Admin Email"
-required>
-
-</div>
+<section class="login-section">
 
 
+    <div class="login-card">
 
-<div class="input-box">
 
-<i class="fa-solid fa-lock"></i>
+        <div class="login-icon">
 
-<input 
-type="password"
-placeholder="Password"
-required>
+            <i class="fa-solid fa-user-shield"></i>
 
-</div>
+        </div>
 
 
 
-<button class="login-btn">
-
-Login
-
-</button>
-
-
-</form>
+        <h2>
+            Admin Login
+        </h2>
 
 
 
-<a href="/" class="back-home">
-
-← Back to Home
-
-</a>
+        <p>
+            Manage AI Evaluation Platform
+        </p>
 
 
 
-</div>
+
+        <form method="POST">
 
 
-</div>
+            <div class="input-box">
+
+                <label>Email</label>
+
+                <input 
+                type="email"
+                name="email"
+                placeholder="Enter Admin Email"
+                required>
+
+            </div>
 
 
 
-</body>
 
-</html>
+            <div class="input-box">
+
+                <label>Password</label>
+
+                <input 
+                type="password"
+                name="password"
+                placeholder="Enter Password"
+                required>
+
+            </div>
+
+
+
+
+            <button class="login-btn" type="submit">
+
+                Login
+
+            </button>
+
+
+
+        </form>
+
+
+
+
+        <div class="bottom-link">
+
+            <a href="/">
+                ← Back to Home
+            </a>
+
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+
+{% endblock %}

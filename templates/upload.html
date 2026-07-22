@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Answer Sheets{% endblock %}
+
+{% block content %}
+
+<section class="login-section">
+
+    <div class="login-card">
+
+        <div class="login-icon">
+            <i class="fa-solid fa-file-arrow-up"></i>
+        </div>
+
+        <h2>Upload Answer Sheets</h2>
+
+        <p>Select a PDF file to upload for AI evaluation.</p>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+
+            <div class="input-box">
+                <label>Select PDF</label>
+                <input type="file" name="file" accept=".pdf" required>
+            </div>
+
+            <button class="login-btn" type="submit">
+                Upload
+            </button>
+
+        </form>
+
+        <div class="bottom-link">
+            <a href="/faculty-dashboard">← Back to Dashboard</a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            background:linear-gradient(135deg,#e0ecff,#f4f7fb);
+            min-height:100vh;
+            padding:40px;
+        }
+
+        .container{
+            max-width:1200px;
+            margin:auto;
+        }
+
+        .header{
+            background:#fff;
+            padding:25px 35px;
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,.1);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:30px;
+        }
+
+        .header h1{
+            color:#1d4ed8;
+        }
+
+        .header p{
+            color:#64748b;
+            margin-top:5px;
+        }
+
+        .logout-btn{
+            text-decoration:none;
+            background:#ef4444;
+            color:white;
+            padding:12px 20px;
+            border-radius:10px;
+            font-weight:600;
+        }
+
+        .dashboard-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#fff;
+            padding:25px;
+            border-radius:18px;
+            box-shadow:0 8px 20px rgba(0,0,0,.08);
+            text-align:center;
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .icon{
+            font-size:45px;
+            margin-bottom:15px;
+        }
+
+        .card h2{
+            color:#0f172a;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            color:#64748b;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            display:inline-block;
+            text-decoration:none;
+            background:#2563eb;
+            color:white;
+            padding:12px 20px;
+            border-radius:10px;
+            font-weight:600;
+        }
+
+        .btn:hover{
+            background:#1d4ed8;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <div>
+            <h1>🎓 Student Dashboard</h1>
+            <p>Welcome to AI Automated Answer Script Evaluation System</p>
+        </div>
+
+        <a href="/" class="logout-btn">
+            Logout
+        </a>
+
+    </div>
+
+    <div class="dashboard-grid">
+
+        <div class="card">
+
+            <div class="icon">📄</div>
+
+            <h2>Evaluation Status</h2>
+
+            <p>Your answer sheet has been evaluated by the faculty.</p>
+
+            <a href="/result" class="btn">
+                View Status
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">📊</div>
+
+            <h2>Evaluation Result</h2>
+
+            <p>View your AI evaluation marks and overall performance.</p>
+
+            <a href="/result" class="btn">
+                View Result
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">📋</div>
+
+            <h2>Question Wise Analysis</h2>
+
+            <p>Check AI analysis for each question.</p>
+
+            <a href="/question-analysis" class="btn">
+                Open
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">📝</div>
+
+            <h2>Detailed Evaluation</h2>
+
+            <p>View detailed feedback for every answer.</p>
+
+            <a href="/detailed-evaluation" class="btn">
+                Open
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">📥</div>
+
+            <h2>Download Report</h2>
+
+            <p>Download your AI evaluation report as PDF.</p>
+
+            <a href="/download-report" class="btn">
+                Download
+            </a>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">📜</div>
+
+            <h2>Transcript</h2>
+
+            <p>View your complete evaluation transcript.</p>
+
+            <a href="/transcript" class="btn">
+                Open
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

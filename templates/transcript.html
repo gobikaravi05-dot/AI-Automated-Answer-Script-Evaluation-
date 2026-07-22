@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}AI Evaluation Transcript{% endblock %}
+
+{% block content %}
+
+<section class="result-section">
+
+<div class="result-card">
+
+<h1>📜 AI Evaluation Transcript</h1>
+
+<p>
+Complete transcript generated from the uploaded answer sheet.
+</p>
+
+<!-- Student Details -->
+
+<div class="student-info">
+
+<div>
+<strong>Student Name</strong><br>
+{{ data.name }}
+</div>
+
+<div>
+<strong>Register No</strong><br>
+{{ data.register }}
+</div>
+
+<div>
+<strong>Department</strong><br>
+{{ data.department }}
+</div>
+
+<div>
+<strong>Subject</strong><br>
+{{ data.subject }}
+</div>
+
+<div>
+<strong>Exam</strong><br>
+{{ data.exam }}
+</div>
+
+<div>
+<strong>Total Questions</strong><br>
+{{ data.questions|length }}
+</div>
+
+</div>
+
+<br>
+
+<!-- Questions -->
+
+<h2>📄 Extracted Questions</h2>
+
+<div class="evaluation-box">
+
+{% if data.questions %}
+
+{% for question in data.questions %}
+
+<div style="margin-bottom:20px;padding:15px;background:#f5f8ff;border-radius:10px;">
+
+<b>Question {{ loop.index }}</b>
+
+<p>{{ question }}</p>
+
+</div>
+
+{% endfor %}
+
+{% else %}
+
+<p>No questions found in uploaded PDF.</p>
+
+{% endif %}
+
+</div>
+
+<br>
+
+<!-- Transcript -->
+
+<h2>📝 Evaluation Timeline</h2>
+
+<table class="analysis-table">
+
+<tr>
+
+<th>Step</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>PDF Uploaded</td>
+
+<td>✅ Success</td>
+
+</tr>
+
+<tr>
+
+<td>Student Details Extracted</td>
+
+<td>✅ Success</td>
+
+</tr>
+
+<tr>
+
+<td>Questions Detected</td>
+
+<td>{{ data.questions|length }}</td>
+
+</tr>
+
+<tr>
+
+<td>AI Evaluation</td>
+
+<td>Completed</td>
+
+</tr>
+
+<tr>
+
+<td>Report Generated</td>
+
+<td>Ready</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<div class="result-buttons">
+
+<a href="/download-report" class="action-btn">
+
+📥 Download Report
+
+</a>
+
+<a href="/student-dashboard" class="action-btn">
+
+⬅ Back
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

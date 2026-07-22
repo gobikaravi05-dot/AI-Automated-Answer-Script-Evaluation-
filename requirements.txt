@@ -1,0 +1,10 @@
+Flask
+reportlab
+pypdf
+google-generativeai
+easyocr
+pytesseract
+Pillow
+numpy
+opencv-python
+python-dotenv

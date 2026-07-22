@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Poppins',sans-serif;
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#e0ecff,#f4f7fb);
+            padding:20px;
+        }
+
+        .login-card{
+            width:100%;
+            max-width:420px;
+            background:#fff;
+            padding:40px 32px;
+            border-radius:24px;
+            text-align:center;
+            box-shadow:0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .login-icon{
+            width:90px;
+            height:90px;
+            margin:0 auto 20px;
+            border-radius:50%;
+            background:linear-gradient(135deg,#2563eb,#1d4ed8);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#fff;
+            font-size:2.5rem;
+        }
+
+        h2{
+            font-size:2rem;
+            color:#0f172a;
+            margin-bottom:8px;
+        }
+
+        p{
+            color:#64748b;
+            margin-bottom:28px;
+        }
+
+        .input-box{
+            text-align:left;
+            margin-bottom:18px;
+        }
+
+        .input-box label{
+            display:block;
+            margin-bottom:8px;
+            font-weight:600;
+            color:#334155;
+        }
+
+        .input-box input{
+            width:100%;
+            padding:14px 16px;
+            border:1px solid #cbd5e1;
+            border-radius:12px;
+            font-size:1rem;
+            outline:none;
+        }
+
+        .input-box input:focus{
+            border-color:#2563eb;
+            box-shadow:0 0 0 4px rgba(37,99,235,0.15);
+        }
+
+        .login-btn{
+            width:100%;
+            padding:14px;
+            border:none;
+            border-radius:12px;
+            background:linear-gradient(135deg,#2563eb,#1d4ed8);
+            color:#fff;
+            font-size:1rem;
+            font-weight:700;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .login-btn:hover{
+            transform:translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card">
+
+        <div class="login-icon">🎓</div>
+
+        <h2>Student Login</h2>
+
+        <p>Login to view results and feedback</p>
+
+        <form action="/student-login" method="POST">
+
+            <div class="input-box">
+                <label>Register Number</label>
+                <input
+                    
+                    type="text"
+                    name="register"
+                    placeholder="Enter Register Number"
+                    required
+>
+            </div>
+            
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" name="password"
+                       placeholder="Enter Password" required>
+            </div>
+
+            <button class="login-btn" type="submit">
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+
+{% block title %}Faculty Dashboard{% endblock %}
+
+{% block content %}
+
+<section class="dashboard-section">
+
+    <!-- Header -->
+    <div class="dashboard-header">
+
+        <div>
+            <h1>👩‍🏫 Faculty Dashboard</h1>
+            <p>Manage answer sheets and AI evaluation process</p>
+        </div>
+
+        <a href="/" class="logout-btn">
+            Logout
+        </a>
+
+    </div>
+
+
+    <!-- Dashboard Cards -->
+
+    <div class="dashboard-cards">
+
+        <div class="dash-card">
+
+            <div class="dash-icon">📄</div>
+
+            <h2>Upload Answer Sheets</h2>
+
+            <p>
+                Upload student answer scripts for AI evaluation.
+            </p>
+
+            <a href="/upload" class="action-btn">
+                Upload
+            </a>
+
+        </div>
+
+
+
+        <div class="dash-card">
+
+            <div class="dash-icon">🤖</div>
+
+            <h2>AI Evaluation</h2>
+
+            <p>
+                Evaluate uploaded answer sheets using AI.
+            </p>
+
+            <a href="/evaluate" class="action-btn">
+                Evaluate
+            </a>
+
+        </div>
+
+
+
+        <div class="dash-card">
+
+            <div class="dash-icon">📊</div>
+
+            <h2>View Results</h2>
+
+            <p>
+                View marks and generated evaluation reports.
+            </p>
+
+            <a href="/result" class="action-btn">
+                View
+            </a>
+
+        </div>
+
+
+
+        <div class="dash-card">
+
+            <div class="dash-icon">📑</div>
+
+            <h2>Transcript</h2>
+
+            <p>
+                Download AI generated transcript reports.
+            </p>
+
+            <a href="/transcript" class="action-btn">
+                Download
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Recent Evaluations -->
+
+    <div class="recent-section">
+
+        <h2>Recent Evaluations</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Student Name</th>
+                    <th>Subject</th>
+                    <th>Status</th>
+                    <th>Marks</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Student A</td>
+                    <td>Artificial Intelligence</td>
+                    <td>Completed</td>
+                    <td>85 / 100</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Student B</td>
+                    <td>Machine Learning</td>
+                    <td>Processing</td>
+                    <td>--</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+{% endblock %}

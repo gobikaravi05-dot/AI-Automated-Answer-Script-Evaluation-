@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% block title %}Evaluation Result{% endblock %}
+
+{% block content %}
+
+<section class="result-section">
+
+    <div class="result-card">
+
+        <h1>AI Evaluation Result</h1>
+
+
+        <!-- Student Information -->
+
+        <div class="student-info">
+
+            <div>
+                <strong>Student Name</strong><br>
+                {{ data.name }}
+            </div>
+
+
+            <div>
+                <strong>Register No</strong><br>
+                {{ data.register }}
+            </div>
+
+
+            <div>
+                <strong>Department</strong><br>
+                {{ data.department }}
+            </div>
+
+
+            <div>
+                <strong>Subject</strong><br>
+                {{ data.subject }}
+            </div>
+
+
+            <div>
+                <strong>Exam</strong><br>
+                {{ data.exam }}
+            </div>
+
+
+            <div>
+                <strong>Evaluation Status</strong><br>
+                ✅ Completed
+            </div>
+
+        </div>
+
+
+
+        <!-- Evaluation Summary -->
+
+        <div class="summary-card">
+
+            <div class="summary-item">
+                <h3>Total Marks</h3>
+                <p>40 / 50</p>
+            </div>
+
+
+            <div class="summary-item">
+                <h3>Percentage</h3>
+                <p>80%</p>
+            </div>
+
+
+            <div class="summary-item">
+                <h3>Performance</h3>
+                <p>Excellent ⭐</p>
+            </div>
+
+        </div>
+
+
+
+        <!-- Buttons -->
+
+        <div class="result-buttons">
+
+            <a href="/question-analysis" class="login-btn">
+                📋 View Question-wise Analysis
+            </a>
+
+
+            <a href="/download-report" class="login-btn">
+                📥 Download Report
+            </a>
+
+        </div>
+
+
+
+        <!-- Back -->
+
+        <div class="bottom-link">
+
+            <a href="/faculty-dashboard">
+                ← Back to Dashboard
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+{% endblock %}
