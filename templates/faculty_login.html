@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Faculty Login{% endblock %}
+
+{% block content %}
+
+<section class="login-section">
+
+    <div class="login-card">
+
+        <div class="login-icon">
+            <i class="fa-solid fa-user-tie"></i>
+        </div>
+
+        <h2>Faculty Login</h2>
+
+        <p>Login to evaluate answer sheets</p>
+
+        <form action="#" method="POST">
+
+            <div class="input-box">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    placeholder="Enter Faculty Email"
+                    required>
+
+            </div>
+
+            <div class="input-box">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    placeholder="Enter Password"
+                    required>
+
+            </div>
+
+            <button class="login-btn" type="submit">
+
+                Login
+
+            </button>
+
+        </form>
+
+        <div class="bottom-link">
+
+            <a href="/">← Back to Home</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
