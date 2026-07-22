@@ -2,143 +2,140 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>
-        {% block title %}AI Automated Answer Script Evaluation{% endblock %}
-    </title>
-
-
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<title>
+{% block title %}
+AI Automated Answer Script Evaluation
+{% endblock %}
+</title>
 
 
 
-    <title>{% block title %}AI Automated Answer Script Evaluation{% endblock %}</title>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+
+<!-- Main CSS -->
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
 
 </head>
+
 
 
 <body>
 
 
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-
-<body>
+<nav class="navbar">
 
 
+<div class="logo">
 
-    <nav class="navbar">
+<i class="fa-solid fa-graduation-cap"></i>
 
-        <div class="logo">
+<span>
+AI Evaluator
+</span>
 
-
-            <i class="fa-solid fa-graduation-cap"></i>
-
-            <span>
-                AI Evaluator
-            </span>
-
-        </div>
-
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="/">
-                    Home
-                </a>
-            </li>
-
-
-            <li>
-                <a href="/faculty-login">
-                    Faculty
-                </a>
-            </li>
-
-
-            <li>
-                <a href="/student-login">
-                    Student
-                </a>
-            </li>
-
-
-            <li>
-                <a href="/admin-login">
-                    Admin
-                </a>
-            </li>
-
-        </ul>
-
-
-    </nav>
+</div>
 
 
 
 
-            <i class="fa-solid fa-graduation-cap"></i>
-            <span>AI Evaluator</span>
-        </div>
+<ul class="nav-links">
 
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/faculty-login">Faculty</a></li>
-            <li><a href="/student-login">Student</a></li>
-        </ul>
 
-    </nav>
+<li>
+<a href="/">
+Home
+</a>
+</li>
 
 
 
-    <main>
-
-        {% block content %}
-
-        {% endblock %}
-
-    </main>
+<li>
+<a href="/faculty-login">
+Faculty
+</a>
+</li>
 
 
-    <footer>
 
-        <p>
-            © 2026 AI Automated Answer Script Evaluation |
-            Women Who Master Hackathon
-        </p>
-
-
-    </footer>
+<li>
+<a href="/student-login">
+Student
+</a>
+</li>
 
 
-    </footer>
 
-    <!-- JavaScript -->
+<li>
+<a href="/admin-login">
+Admin
+</a>
+</li>
 
-    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+</ul>
+
+
+</nav>
+
+
+
+
+
+<main>
+
+
+{% block content %}
+
+{% endblock %}
+
+
+</main>
+
+
+
+
+
+
+<footer>
+
+
+<p>
+
+© 2026 AI Automated Answer Script Evaluation |
+Women Who Master Hackathon
+
+</p>
+
+
+</footer>
+
+
+
+
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
 
 </body>
 
-</body>
 
 </html>
